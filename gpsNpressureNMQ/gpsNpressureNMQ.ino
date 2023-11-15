@@ -32,6 +32,7 @@ int servoAngle = 90;  // Initial servo angle
 void setup() {
   Serial.begin(9600);
   Serial2.begin(9600);
+  pinMode(mq2Pin,INPUT);
   pressure_sensor.begin(MPS_OUT_pin, MPS_SCK_pin, 128);
   pressure_sensor.set_offset(offset);
   servoMotor.attach(26);  // Attach the servo to pin 26
